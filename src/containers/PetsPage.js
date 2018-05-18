@@ -6,15 +6,15 @@ import PetsNew from './PetsNew';
 import PetsShow from './PetsShow';
 import PetsList from '../components/PetsList';
 
-const PetsPage = ({ match, pets }) =>
-  //
-  // componentDidMount() {
-  //   this.props.fetchPets();
-  // }
-  //
-  // render() {
-  //   debugger;
-  //   return (
+class PetsPage extends Component {
+
+  componentDidMount() {
+    this.props.fetchPets();
+  }
+
+  render() {
+    const { match, pets } = this.props;
+    return (
       <div>
         <PetsList pets={pets} />
         <Switch>
@@ -25,9 +25,9 @@ const PetsPage = ({ match, pets }) =>
           )}/>
         </Switch>
       </div>
-//     )
-//   }
-// };
+    )
+  }
+};
 
 const mapStateToProps = state => {
   return {
