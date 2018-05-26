@@ -19,7 +19,7 @@ class PetsPage extends Component {
         <PetsList pets={pets} />
         <Switch>
           <Route path={`${match.url}/new`} component={PetsNew} />
-          <Route path={`${match.url}/:movieId`} component={PetsShow}/>
+          <Route path={`${match.url}/:petId`} component={PetsShow}/>
           <Route exact path={match.url} render={() => (
             <h3>Please select a Pet from the list.</h3>
           )}/>
